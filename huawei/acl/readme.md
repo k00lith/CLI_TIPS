@@ -31,3 +31,31 @@ interface GigabitEthernet0/0/1
 #
 ```
 
+Еще пример:
+
+```
+acl name DEFEND-ROUTER 3995
+ rule 5 permit ip source 8.8.8.0 0.0.0.15
+ rule 10 permit ip source 55.55.55.55 0
+ rule 15 deny ip
+acl name ATTACK_ICMP 3996
+ rule 5 deny udp destination 4.4.4.4 0 destination-port range snmp snmptrap
+ rule 10 permit udp destination-port range snmp snmptrap
+```
+
+На интерфейс:
+
+```
+#
+interface GigabitEthernet0/0/1
+ description ---> SOME_DEV <---
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+ port trunk allow-pass vlan 712
+ traffic-mirror inbound acl name NetFlow to observe-port 1
+ traffic-filter inbound acl name ATTACK
+ undo ntdp enable
+ undo ndp enable
+ port-mirroring to observe-port 2 outbound
+#
+```
