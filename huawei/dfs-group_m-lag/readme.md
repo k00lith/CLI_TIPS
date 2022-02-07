@@ -1,4 +1,4 @@
-Ломовейшая стоять - разобрать
+Ломовейшая статья - разобрать
 
 https://ipttl.blogspot.com/2017/01/cisco-nexus-vpc-fex.html
 
