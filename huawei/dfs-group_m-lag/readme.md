@@ -6,7 +6,7 @@ https://ipttl.blogspot.com/2017/01/cisco-nexus-vpc-fex.html
 
 #### dfs-group и m-lag
 
-#### vPC и Portchannel
+#### vPC и Port channel
 
 это одно и тоже, одно - huawei, другое - cisco
 
