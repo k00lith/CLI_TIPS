@@ -34,3 +34,5 @@ set forward-domain (задаешь ID)
 ```
 
 ID должны быть отличные друг от друга для разных влан для VDOM в transparent mode
+
+https://docs.fortinet.com/document/fortigate/6.0.0/handbook/844342/forwarding-domains-in-transparent-mode
