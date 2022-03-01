@@ -22,3 +22,15 @@ OST-CU-IPS01 (VS01-MCFR) # end
 OST-CU-IPS01 # 
 OST-CU-IPS01 #
 ```
+
+Еще, для корректного прохождения трафика
+
+```
+config vdom
+edit NAME-OF-VDOM
+config system interface
+edit нужный интерфейс
+set forward-domain (задаешь ID)
+```
+
+ID должны быть отличные друг от друга для разных влан для VDOM в transparent mode
