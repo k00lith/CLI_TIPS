@@ -10,3 +10,6 @@ Start recording %S (%H) - %h:%m:%s
 Stop recording %S (%H) - %h:%m:%s
 ```
 
+
+
+![alt text](securecrt/pic/lg_1.png "log")
