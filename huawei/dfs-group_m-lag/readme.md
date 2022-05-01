@@ -22,6 +22,12 @@ m-lag-ом можно объединять свитчи пары свитчей 
 
 Далее про m-lag
 
+##### Сначала включаем stp , инчае peer-link не заведется
+```
+stp mode rstp
+stp v-stp enable
+```
+
 #### Создаем dfs-group:
 
 ```
@@ -73,9 +79,33 @@ ip route-static vpn-instance MGMT 172.17.0.0 255.255.0.0 172.17.1.1
 #
 interface Eth-Trunk0
  mode lacp-static
+ stp edged-port enable
  peer-link 1
 #
 ```
+
+Если stp на пирлинке не включить, peer-link будет сапрессед:
+```
+<huawei>displ int br
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+(p): port alarm down
+(dl): DLDP down
+(c): CFM down
+(sd): STP instance discarding
+InUti/OutUti: input utility rate/output utility rate
+Interface                  PHY      Protocol  InUti OutUti   inErrors  outErrors
+Eth-Trunk0               up       up(sd)    0.01%  0.01%          0          0
+  100GE1/0/1               up       up        0.01%  0.01%          0          0
+  100GE1/0/2               up       up        0.01%  0.01%          0          0
+```
+
 #### Создаем несколько m-lag
 
 ```
