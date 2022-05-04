@@ -31,3 +31,12 @@ bgp 65200
 ```
 displ bgp vpnv4 vpn-instance VRF_55 routing-table peer 98.183.176.1 advertised-routes
 ```
+
+
+Если нужно разрешить определенные сети на анонс и еще сделать к ним препенд, то:
+
+```
+route-policy PFRETSP_OUR_NETS_OUT permit node 1
+ if-match ip-prefix PFRETSP_OUR_NETS_OUT
+ apply as-path 65212 65212 additive
+```
