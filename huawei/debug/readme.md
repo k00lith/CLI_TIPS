@@ -19,3 +19,13 @@ Info: Current terminal debugging is on.
   t m
   t d
 ```
+
+
+===
+```
+undo degugg all
+
+undo terminal monitor
+
+undo terminal debugging
+```
