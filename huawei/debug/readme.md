@@ -23,7 +23,7 @@ Info: Current terminal debugging is on.
 
 ===
 ```
-undo degugg all
+undo debugging all
 
 undo terminal monitor
 
