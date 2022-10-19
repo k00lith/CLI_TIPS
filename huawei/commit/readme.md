@@ -71,7 +71,16 @@ Building configuration
 Info: The system enters the trial configuration mode.
 The system will revert to previous configuration if the trial configuration is not confirmed in 300 seconds. 
 ```
-#### Отменить trial конфигурацию и откатить немедленно:
+```bash
+dis configuration trial status 
+```
+#### Что бы окончательно применить триальные изменения, необходимо в рамках текущей ssh\консольной сессии еще раз дать команду “commit”.
+```bash
+commit 
+```
+#### Если после триального коммита выкинуло из ssh сессии и получилось еще раз зайти по ssh или через консоль, то уже нельзя будет руками откатиться или применить триальные изменения, будет ругаться. Надо будет ждать пока истечет время триала.
+
+#### Отменить trial конфигурацию и откатить немедленно (При необходимости, можно раньше времени откатиться руками - “abort trial”.):
 ```bash
 [~HUAWEI]abort trial 
 Warning: The trial configuration will be rolled back. Continue? [Y/N]:y
