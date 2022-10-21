@@ -27,7 +27,7 @@ interface GigabitEthernet1/0/0
 return 
 ```
 
-###Verify the configuration.
+### Verify the configuration.
 #### Run the  command on the router to check NAT server information.
 ```bash
 display nat server
