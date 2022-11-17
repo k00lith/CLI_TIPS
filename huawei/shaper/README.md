@@ -66,7 +66,11 @@ Classifier
 traffic classifier ALL operator and
  if-match acl ALL
 ```
-
+или мапим к влану
+```
+traffic classifier class-vlan333 operator and
+ if-match vlan-id 333
+```
 
 Непосркедственно вешаем на интерфйес в обе стороны
 ```
