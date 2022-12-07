@@ -1,0 +1,4 @@
+
+```
+switchport forbidden default-vlan
+```
